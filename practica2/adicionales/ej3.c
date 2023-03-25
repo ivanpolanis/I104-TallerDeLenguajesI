@@ -23,7 +23,7 @@ void lowerStr(char *string)
   }
 }
 
-void numToStr(int n, char *string)
+char *numToStr(int n, char *string)
 {
   char *ptr = string;
   int longitud = n == 0 ? 1 : (int)(log10(abs(n)) + 1);
@@ -44,23 +44,35 @@ void numToStr(int n, char *string)
     n /= 10;
     ptr--;
   }
+  return string;
 }
 
 char *numToText(int n, char *string)
 {
-  char *nums[] = {"cero", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve", "diez", "once", "doce", "trece", "catorce", "quince", "dieciseis", "diecisiete", "diecinueve"};
-  char *teens[] = {"", "", "treinta","cuarenta","cincuenta","sesenta","setenta","ochenta","noventa"};
+  char *nums[] = {"cero", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve", "diez", "once", "doce", "trece", "catorce", "quince", "dieciseis", "diecisiete","dieciocho", "diecinueve", "veinte"};
+  char *teens[] = {"", "", "treinta", "cuarenta", "cincuenta", "sesenta", "setenta", "ochenta", "noventa"};
 
-  if (n<0 || n>99){
+  if (n < 0 || n > 99)
+  {
     strcpy(string, "Numero fuera de rango");
     return string;
   }
 
-  if(n < 20){
+  if (n <= 20)
+  {
     strcpy(string, nums[n]);
-  } else if(n<30){
-    sprintf(string, "veinti%s%s", nums[n%10]);
-  } else{
+  }
+  else if (n < 30)
+  {
+    sprintf(string, "veinti%s", nums[n % 10]);
+  }
+  else
+  {
+    if (!(n % 10))
+    {
+      strcpy(string, teens[(n / 10) - 1]);
+      return string;
+    }
     sprintf(string, "%s y %s", teens[(n / 10) - 1], nums[n % 10]);
   }
   return string;
@@ -69,7 +81,7 @@ char *numToText(int n, char *string)
 int main()
 {
   char string[100];
-  numToText(95, string);
+  numToText(20, string);
   printf("%s", string);
   return 0;
 }
