@@ -13,10 +13,13 @@ int main()
   while (1)
   {
     int n = tirarDados();
-    if (n == 11 || n == 7){
+    if (n == 11 || n == 7)
+    {
       printf("El jugador saco %d y gano.\n", n);
-      break;}
-    if(n==2 || n ==12){
+      break;
+    }
+    if (n == 2 || n == 12)
+    {
       printf("El jugador saco %d y perdio.\n");
       break;
     }
