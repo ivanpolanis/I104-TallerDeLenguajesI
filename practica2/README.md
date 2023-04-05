@@ -131,7 +131,7 @@ código. Las primeras líneas ya fueron completadas a modo de ejemplo.
 
 **3\.** Analice y ejecute el siguiente código
 ```c
-include <stdio.h>
+#include <stdio.h>
 
 int main()
 {
@@ -159,6 +159,8 @@ int main()
 **4\.** Analice y ejecute el siguiente código:
 
 ```c
+#include <stdio.h>
+
 int main(){
   int vector[10]={10,20,30,40,50,60,70,80,90,100};
   int i;
