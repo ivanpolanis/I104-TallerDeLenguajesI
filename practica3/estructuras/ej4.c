@@ -5,19 +5,20 @@
 
 typedef struct
 {
-  char *palo;
+  char palo[10];
   int num;
 } carta;
 
 void inicializarMazo(carta mazo[])
 {
   char palos[4][10] = {{"Basto"}, {"Copa"}, {"Espada"}, {"Oro"}};
-  for (int i = 1; i <= 4; i++)
+  for (int i = 0; i < 4; i++)
   {
-    for (int j = 1; j <= (N_CARTAS - 2) / 12; j++)
+    printf("%s", palos[i]);
+    for (int j = 1; j <= (N_CARTAS - 2) / 4; j++)
     {
-      strcpy(mazo[(i * j) - 1].palo, palos[i - 1]);
-      mazo[(i * j) - 1].num = j;
+      strcpy(mazo[(i *12) + j - 1].palo, palos[i]);
+      mazo[(i *12) + j - 1].num = j;
     }
   }
   strcpy(mazo[48].palo, "Comodin");
@@ -28,8 +29,10 @@ void inicializarMazo(carta mazo[])
 
 void imprimirMazo(carta mazo[])
 {
+  printf("Mazo:\n");
   for (int i = 0; i < N_CARTAS; i++)
   {
+    printf("I:%d ", i);
     if (mazo[i].num == 0)
       printf("%s ", mazo[i].palo);
     else
