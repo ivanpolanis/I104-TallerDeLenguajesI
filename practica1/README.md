@@ -52,9 +52,10 @@ int main(){
 *c.* ¿Qué sucede cuando en una operación intervienen operadores diferentes?
 
 Por ejemplo: 
-$
+
+$$
 x = 2*32+10\%2-1;
-$
+$$
 
 *d.* Investigue el operador sizeof*.* ¿Para qué sirve? Luego aplíquelo y verifique el tamaño de los distintos tipos de datos en su máquina.
 
