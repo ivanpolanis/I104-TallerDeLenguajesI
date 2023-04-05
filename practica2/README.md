@@ -21,7 +21,9 @@ $$
   A´_{ij}=c\cdot A_{ij}
 }
 $$
+
 Por ejemplo:
+
 $$
 2 \cdot
 \begin{bmatrix}
