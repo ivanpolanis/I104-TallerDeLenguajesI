@@ -6,6 +6,7 @@ Este repositorio contiene las prácticas realizadas en la materia **Taller de Le
 
 - [Práctica 1](practica1/): Tipos de datos simples y estructuras de control - Funciones – Identificadores
 - [Práctica 2](practica2/): Arreglos - Punteros - Strings
+- [Práctica 3](practica3/): Tipos de Datos Compuestos – Estructuras, Uniones, Enumerativos y Campos de Bits
 
 Cada práctica incluye su correspondiente archivo de código fuente y un archivo README que explica los objetivos y los pasos seguidos para completar la práctica.
 
