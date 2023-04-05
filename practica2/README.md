@@ -37,6 +37,7 @@ $$
 8 & -4 & 10
 \end{bmatrix}
 $$
+
 Escriba una función que reciba una matriz *A* y un número *c*, y que retorne en *A* la multiplicación escalar *cA*.
 
 **4\.** Sea $A$ una matriz con m filas y n columnas. La matriz transpuesta, denotada con $A^t$ está dada por:
