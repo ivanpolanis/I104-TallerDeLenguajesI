@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include <time.h>
 
 #define N_CARTAS 50
 
@@ -32,7 +34,6 @@ void imprimirMazo(carta mazo[])
   printf("Mazo:\n");
   for (int i = 0; i < N_CARTAS; i++)
   {
-    printf("I:%d ", i);
     if (mazo[i].num == 0)
       printf("%s ", mazo[i].palo);
     else
@@ -42,11 +43,38 @@ void imprimirMazo(carta mazo[])
   }
 }
 
+void barajarMazo(carta mazo[]){
+  srand(time(NULL));
+  for (int i = 0; i < N_CARTAS;i++){
+    carta actual = mazo[i];
+    int n = rand() % 50;
+    mazo[i] = mazo[n];
+    mazo[n] = actual;
+  } 
+}
+
+
+carta sacar_carta(carta mazo[]) {
+
+    carta tope = mazo[0];
+
+    for (int i = 1; i < N_CARTAS ; i++) {
+        mazo[i - 1] = mazo[i];
+    }
+
+    mazo[N_CARTAS - 1] = tope;
+
+    return tope;
+}
+
 int main()
 {
   carta mazo[N_CARTAS];
 
-  // Imprimir el mazo
+
   inicializarMazo(mazo);
+  imprimirMazo(mazo);
+  barajarMazo(mazo);
+  printf("\n");
   imprimirMazo(mazo);
 }
