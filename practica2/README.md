@@ -8,15 +8,15 @@
 
 **2\.** Escriba 3 funciones que reciban un arreglo unidimensional de float y que:
 
-*a.* retorne el promedio de sus valores.
+_a._ retorne el promedio de sus valores.
 
-*b.* retorne el mínimo de sus valores.
+_b._ retorne el mínimo de sus valores.
 
-*c.* retorne la posición del máximo de sus valores.
+_c._ retorne la posición del máximo de sus valores.
 
 **3\.** Sea A una matriz con m filas y n columnas y c un número. La multiplicación de una matriz A por un escalar c está dada por multiplicar cada entrada de A por c:
 
-$$ 
+$$
 {
   A´_{ij}=c\cdot A_{ij}
 }
@@ -40,14 +40,13 @@ $$
 \end{bmatrix}
 $$
 
-Escriba una función que reciba una matriz *A* y un número *c*, y que retorne en *A* la multiplicación escalar *cA*.
+Escriba una función que reciba una matriz _A_ y un número _c_, y que retorne en _A_ la multiplicación escalar _cA_.
 
 **4\.** Sea $A$ una matriz con m filas y n columnas. La matriz transpuesta, denotada con $A^t$ está dada por:
 
 $$
 A_{ij}^t=A_{ji}
 $$
-
 
 En donde el elemento a de la matriz original $A$ se convertirá en el elemento $a_{ij}$ de la matriz transpuesta $A^t$. Por ejemplo:
 
@@ -62,13 +61,12 @@ b & d
 \end{bmatrix}
 $$
 
-
 Escriba una función que reciba una matriz cuadrada A e imprima en pantalla su matriz transpuesta.
 
 **5\.** Dadas dos matrices A y B de m x n, la suma (A+B) se calcula de la siguiente manera:
 
 $$
-(A+B)_{ij}=A_ij+B_ij \ \ \  \text{donde } 1\le i \le m \ \ \text{y } \ 1\le j \le n 
+(A+B)_{ij}=A_ij+B_ij \ \ \  \text{donde } 1\le i \le m \ \ \text{y } \ 1\le j \le n
 $$
 
 Por ejemplo:
@@ -77,7 +75,7 @@ $$
 \begin{bmatrix}
 1 & 3 & 1 \\
 1 & 0 & 0
-\end{bmatrix} + 
+\end{bmatrix} +
 \begin{bmatrix}
 0 & 0 & 5 \\
 7 & 5 & 0
@@ -98,38 +96,40 @@ Escriba una función que reciba tres matrices A, B y C de mismas dimensiones, y 
 
 **7\.** Se dispone de un arreglo con información de las precipitaciones de todos los días de todos los meses de los últimos 10 años. Se desea conocer para cada año el mes en que menos llovió y también cual es el año que tuvo menor precipitación promedio.
 
-> *Nota: por simplicidad asuma que todos los meses tienen 30 días.*
+> _Nota: por simplicidad asuma que todos los meses tienen 30 días._
 
 ### **Punteros**
+
 ---
 
-**1\.** Rehaga el ejercicio 2 de la sección *Arreglos Estáticos,* pero en este caso escribiendo una única función que retorne los 3 valores pedidos.
+**1\.** Rehaga el ejercicio 2 de la sección _Arreglos Estáticos,_ pero en este caso escribiendo una única función que retorne los 3 valores pedidos.
 
 **2\.** Complete la siguiente tabla con los valores correspondientes para cada variable de acuerdo con el
 
 código. Las primeras líneas ya fueron completadas a modo de ejemplo.
 
-| | a | b | c | p1 | p2 |
-|:--|:-:|:-:|:-:|:-:|:-:|
-|int a = 1;|1|###|###|###|###|
-|int b = 2;|1|2|###|###|###|
-|int c = 4;|1|2|4|###|###|
-|int *p1,\*p2;|1|2|4|###|###|
-|p1=&a;|1|2|4|&a|###|
-|p2=&c;|1|2|4|&a|&c|
-|*p1 = (\*p2)++;|||||
-|p2 = &b;|||||
-|*p1 += \*p2;|||||
-|p1 = p2;|||||
-|++*p1;|||||
-|p1 = &a;|||||
-|*p2 *= *p1;|||||
-|c = *p2 + *p1;|||||
-|a = *p1 = ++\*p2;|||||
+|                    |  a  |  b  |  c  | p1  | p2  |
+| :----------------- | :-: | :-: | :-: | :-: | :-: |
+| int a = 1;         |  1  | ### | ### | ### | ### |
+| int b = 2;         |  1  |  2  | ### | ### | ### |
+| int c = 4;         |  1  |  2  |  4  | ### | ### |
+| int \*p1,\*p2;     |  1  |  2  |  4  | ### | ### |
+| p1=&a;             |  1  |  2  |  4  | &a  | ### |
+| p2=&c;             |  1  |  2  |  4  | &a  | &c  |
+| \*p1 = (\*p2)++;   |     |     |     |     |
+| p2 = &b;           |     |     |     |     |
+| \*p1 += \*p2;      |     |     |     |     |
+| p1 = p2;           |     |     |     |     |
+| ++\*p1;            |     |     |     |     |
+| p1 = &a;           |     |     |     |     |
+| \*p2 \*= \*p1;     |     |     |     |     |
+| c = \*p2 + \*p1;     |     |     |     |     |
+| a = \*p1 = ++\*p2; |     |     |     |     |
 
->*Nota: ### se utiliza para indicar que la variable no ha sido inicializada aún.*
+> _Nota: ### se utiliza para indicar que la variable no ha sido inicializada aún._
 
 **3\.** Analice y ejecute el siguiente código
+
 ```c
 #include <stdio.h>
 
@@ -151,10 +151,10 @@ int main()
   return 0;
 }
 ```
+
 ¿Puede explicar qué significado tienen los valores impresos?
 
-¿Qué ocurre cuando se incrementa en uno el puntero “*p*”?
-
+¿Qué ocurre cuando se incrementa en uno el puntero “_p_”?
 
 **4\.** Analice y ejecute el siguiente código:
 
@@ -174,15 +174,15 @@ int main(){
 }
 ```
 
-*a.* ¿Qué imprime el programa?
+_a._ ¿Qué imprime el programa?
 
-*b.* ¿Por qué razón se ve modificada la variable *vector*? ¿Es correcto realizar esto?
+_b._ ¿Por qué razón se ve modificada la variable _vector_? ¿Es correcto realizar esto?
 
-*c.* ¿Qué ocurre si en la línea 7 cambia \*p por *vector[i]*?
+_c._ ¿Qué ocurre si en la línea 7 cambia \*p por _vector[i]_?
 
-*d.* Cambie la línea 8 por *p+=1*. ¿Qué sucede?
+_d._ Cambie la línea 8 por _p+=1_. ¿Qué sucede?
 
-*e.* Cambie la línea 8 por *p+=2*. ¿Qué sucede?
+_e._ Cambie la línea 8 por _p+=2_. ¿Qué sucede?
 
 **5\.** Escriba una función que reciba un arreglo unidimensional e invierta el orden de sus valores. Por ejemplo:
 
@@ -195,10 +195,12 @@ $$
 \end{bmatrix}
 $$
 
->*Nota: utilice la función swap definida en la Práctica 1.*
+> _Nota: utilice la función swap definida en la Práctica 1._
 
 ### **Strings (Vectores de Caracteres)**
+
 ---
+
 **1\.** Escriba un programa que lea palabras desde teclado hasta leer la palabra "ZZZ". Informe la cantidad de palabras de longitud 5.
 
 **2\.** Escriba un programa que lea palabras desde teclado hasta leer la palabra "XXX". Se requiere informar la cantidad de palabras ingresadas que terminan con la letra ‘o’.
@@ -209,16 +211,16 @@ $$
 
 **5\.** La función strcpy recibe dos punteros a cadenas de caracteres y copia la cadena apuntada por el segundo (incluyendo el carácter nulo) en la cadena apuntada por el primero. Además, la función retorna el primer puntero. Implemente su propia versión de la función strcpy.
 
-> *Nota: asuma que la primera cadena de caracteres tiene espacio suficiente para almacenar a la segunda.*
+> _Nota: asuma que la primera cadena de caracteres tiene espacio suficiente para almacenar a la segunda._
 
 **6\.** Escriba un programa que lea una palabra desde teclado y luego informe la cantidad de veces que aparece cada letra de la palabra leída en ella misma.
 
-> *Nota: asuma que la palabra está formada sólo por letras minúsculas.*
+> _Nota: asuma que la palabra está formada sólo por letras minúsculas._
 
 **7\.** Escriba una función que reciba un puntero a una secuencia de caracteres y que retorne 1 en caso de que la palabra contenida sea palíndroma o 0 en caso contrario.
 
-*a.* Utilizando índices numéricos.
+_a._ Utilizando índices numéricos.
 
-*b.* Utilizando punteros.
+_b._ Utilizando punteros.
 
-> *Nota: una palabra palíndroma es aquella que se lee igual hacia izquierda a derecha que de derecha a izquierda. Por ejemplo: arenera, radar, reconocer, rotor, salas, seres, sometemos.*
+> _Nota: una palabra palíndroma es aquella que se lee igual hacia izquierda a derecha que de derecha a izquierda. Por ejemplo: arenera, radar, reconocer, rotor, salas, seres, sometemos._

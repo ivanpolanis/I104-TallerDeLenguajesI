@@ -6,16 +6,17 @@
 
 **1\.** **Resuelva**:
 
-*a.* Defina una estructura rectangulo que contenga los siguientes campos: base(float) y altura (float).
+_a._ Defina una estructura rectangulo que contenga los siguientes campos: base(float) y altura (float).
 
-*b.* Escriba una función que reciba una estructura rectangulo y la inicialice a partir de valores ingresados por teclado.
+_b._ Escriba una función que reciba una estructura rectangulo y la inicialice a partir de valores ingresados por teclado.
 
-*c.* Escriba una función que dada una estructura rectangulo, calcule el área.
+_c._ Escriba una función que dada una estructura rectangulo, calcule el área.
 
-*d.* Escriba un programa que defina un arreglo de 10 rectángulos (struct rectangulo) y lo inicialice utilizando la función definida en el inciso anterior. Luego, informe el número de rectángulo que tiene menor área.
+_d._ Escriba un programa que defina un arreglo de 10 rectángulos (struct rectangulo) y lo inicialice utilizando la función definida en el inciso anterior. Luego, informe el número de rectángulo que tiene menor área.
 
 **2\.** Dados los siguientes bloques de código:
-``` c
+
+```c
 struct persona {
     char nombre[50];
     long int DNI;
@@ -23,10 +24,11 @@ struct persona {
 
 typedef struct persona persona_t;
 ```
+
 ```c
 typedef struct persona {
     char nombre[50];
-    long int DNI; 
+    long int DNI;
 } persona_t;
 ```
 
@@ -34,15 +36,15 @@ typedef struct persona {
 
 **3\.** **Resuelva**:
 
-*a.* Defina una estructura direccion que contenga los siguientes campos: calle (arreglo de 50 caracteres), ciudad (arreglo de 30 caracteres), codigo_postal (int) y pais (arreglo de 40 caracteres).
+_a._ Defina una estructura direccion que contenga los siguientes campos: calle (arreglo de 50 caracteres), ciudad (arreglo de 30 caracteres), codigo_postal (int) y pais (arreglo de 40 caracteres).
 
-*b.* Defina una estructura alu que contenga los siguientes campos: apellido (arreglo de 50 caracteres), nombre (arreglo de 50 caracteres), legajo (arreglo de 8 caracteres), promedio (float) y domicilio(struct direccion).
+_b._ Defina una estructura alu que contenga los siguientes campos: apellido (arreglo de 50 caracteres), nombre (arreglo de 50 caracteres), legajo (arreglo de 8 caracteres), promedio (float) y domicilio(struct direccion).
 
 - Renombre el tipo struct alu a alumno mediante la palabra clave typedef.
--  Escriba una función que reciba un alumno y lo inicialice a partir de valores ingresados por teclado.
+- Escriba una función que reciba un alumno y lo inicialice a partir de valores ingresados por teclado.
 - Escriba un programa que defina un arreglo de 30 elementos alumno y lo inicialice utilizando la función definida en el inciso anterior. Luego, informe el nombre y apellido del alumno que tiene mejor promedio.
 
-*c.* Defina la estructura pun3D, la cual representa una posición en el espacio. La misma debe contener los campos x(float), y(float) y z (float). Luego:
+_c._ Defina la estructura pun3D, la cual representa una posición en el espacio. La misma debe contener los campos x(float), y(float) y z (float). Luego:
 
 - Renombre la estructura pun3Da punto3Dutilizando la palabra clave typedef.
 
@@ -50,18 +52,17 @@ typedef struct persona {
 
 - Imprima en pantalla el tamaño del tipo punto3D. ¿Cuánto ocupa? ¿Es igual al de struct pun3D? ¿Por qué?
 
-*d.* Defina un arreglo de 4 elementos de tipo punto3D e imprima en pantalla el espacio ocupado por el mismo. ¿Cuánto ocupa? ¿Por qué?
-
+_d._ Defina un arreglo de 4 elementos de tipo punto3D e imprima en pantalla el espacio ocupado por el mismo. ¿Cuánto ocupa? ¿Por qué?
 
 **4\.** Implemente una estructura y las funciones para implementar un mazo de 50 cartas españolas. Implemente las siguientes funciones y realice un programa para probarlas:
 
-*a.* Barajar el mazo de cartas. 
+_a._ Barajar el mazo de cartas.
 
-*b.* Sacar una carta: dado un mazo, sacar la carta del mazo y devolverla.
+_b._ Sacar una carta: dado un mazo, sacar la carta del mazo y devolverla.
 
-*c.* Imprimir una carta (número/figura con su palo).
+_c._ Imprimir una carta (número/figura con su palo).
 
-> *Nota: utilice constantes (define o const) para definir los palos de las cartas, modelice las cartas y el mazo.*
+> _Nota: utilice constantes (define o const) para definir los palos de las cartas, modelice las cartas y el mazo._
 
 ### **Uniones**
 
@@ -69,13 +70,13 @@ typedef struct persona {
 
 **6\.** Implemente un tipo de datos Fecha para almacenar día, mes y año teniendo en cuenta las siguientes observaciones:
 
-*a.* Utilice un formato que sea “cómodo” para trabajar con fechas
+_a._ Utilice un formato que sea “cómodo” para trabajar con fechas
 
-*b.* Como las comparaciones entre fechas son algo engorrosas, utilice una unión para realizar un “hack” que utilice un campo adicional que se superponga con la fecha y permita compararlas directamente (estudiar orden y tamaño de cada campo de la fecha).
-    
-*c.* Implemente un programa que compare distintas fechas para demostrar que esta estrategia funciona (puede aprovechar la declaración de las variables para asignar las fechas).
+_b._ Como las comparaciones entre fechas son algo engorrosas, utilice una unión para realizar un “hack” que utilice un campo adicional que se superponga con la fecha y permita compararlas directamente (estudiar orden y tamaño de cada campo de la fecha).
 
-*d.* ¿Cree que esta implementación funcionaría para todos los compiladores de C sin importar la arquitectura del procesador? (Pista: Little endian vs. Big endian)
+_c._ Implemente un programa que compare distintas fechas para demostrar que esta estrategia funciona (puede aprovechar la declaración de las variables para asignar las fechas).
+
+_d._ ¿Cree que esta implementación funcionaría para todos los compiladores de C sin importar la arquitectura del procesador? (Pista: Little endian vs. Big endian)
 
 **7\.** Desarrolle un programa que permita leer por teclado e imprimir por pantalla la información correspondiente a un estudiante: Apellido, Nombres, Legajo e Identificación. Tenga en cuenta que la identificación es el DNI (Numérico) para estudiantes argentinos y pasaporte (Alfanumérico) para estudiantes extranjeros.
 
@@ -97,25 +98,25 @@ typedef enum { LETRA_A = 'A', LETRA_B, LETRA_Z = 'Z' } Letras2;
 
 **9\.** **Resuelva**:
 
-*a.* Defina un enumerativo que permita representar los días de la semana (domingo a sábado).
+_a._ Defina un enumerativo que permita representar los días de la semana (domingo a sábado).
 
-*b.* Realice dos implementaciones diferentes de una función que imprima el texto asociado a un día de la semana del enumerativo.
+_b._ Realice dos implementaciones diferentes de una función que imprima el texto asociado a un día de la semana del enumerativo.
 
 > Nota: si bien una función para la impresión no es necesaria, favorece la reutilización, encapsulamiento, validación del rango del dato y minimiza la posibilidad de errores futuros
 
 **10\.** Un teléfono móvil tiene varios bits de configuración que permite controlar el encendido y apagado de dispositivos con el objetivo, generalmente, de ahorrar energía. Cada bit se asocia a un módulo diferente donde un 1 significa encendido y un 0 apagado. Comenzando desde el bit más significativo, la descripción de estos bits es la siguiente: Bluetooth, Wifi, GPS, Datos, Cámara Frontal, Cámara Trasera, Linterna y Vibrar.
 
-| Bluetooth | Wifi | GPS | Datos | Frontal | Trasera | Linterna | Vibrar |
-| :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------: |
-| **Bit 7** | **Bit 6** | **Bit 5** | **Bit 4**  | **Bit 3** | **Bit 2** | **Bit 1** | **Bit 0** |
+| Bluetooth |   Wifi    |    GPS    |   Datos   |  Frontal  |  Trasera  | Linterna  |  Vibrar   |
+| :-------: | :-------: | :-------: | :-------: | :-------: | :-------: | :-------: | :-------: |
+| **Bit 7** | **Bit 6** | **Bit 5** | **Bit 4** | **Bit 3** | **Bit 2** | **Bit 1** | **Bit 0** |
 
 **Resuelva**:
 
-*a.* Utilice un tipo enumerativo para representar los distintos módulos que tiene el teléfono, asignándole a cada integrante un valor que sea potencia de 2. Esta estrategia permite combinar varios valores en una misma variable, y de esta forma modelar que un módulo está activo cuando el valor asociado está presente.
+_a._ Utilice un tipo enumerativo para representar los distintos módulos que tiene el teléfono, asignándole a cada integrante un valor que sea potencia de 2. Esta estrategia permite combinar varios valores en una misma variable, y de esta forma modelar que un módulo está activo cuando el valor asociado está presente.
 
-*b.* Defina 2 constantes donde la primera contiene a todos los módulos y otra donde no contenga ninguno.
+_b._ Defina 2 constantes donde la primera contiene a todos los módulos y otra donde no contenga ninguno.
 
-*c.* Dada una variable del tipo definido en a), describa expresiones que permitan:
+_c._ Dada una variable del tipo definido en a), describa expresiones que permitan:
 
 - Marcar un módulo como activo
 
@@ -125,7 +126,7 @@ typedef enum { LETRA_A = 'A', LETRA_B, LETRA_Z = 'Z' } Letras2;
 
 - Determinar si un módulo esta activo
 
-*d.* Implemente un programa donde aplique todos los puntos anteriores.
+_d._ Implemente un programa donde aplique todos los puntos anteriores.
 
 ### **Campos de Bits**
 
@@ -133,9 +134,9 @@ typedef enum { LETRA_A = 'A', LETRA_B, LETRA_Z = 'Z' } Letras2;
 
 **12\.** El formato de color RGB es el más extendido para uso en imágenes como en displays. Este formato utiliza 3 componentes (Red, Green, Blue) de 8 bits para codificar un píxel de color, requiriendo 3 bytes o 24 bits de memoria. Hace muchos años cuando surgieron los primeros teléfonos a color se utilizó un formato RGB reducido a 2 bytes o 16 bits (Red:5 bits, Green:6 bits, Blue: 5 bits) para reducir el espacio de almacenamiento y mejorar las velocidades de transferencia. Actualmente en el ámbito de los microcontroladores estos displays siguen siendo utilizados. Teniendo en cuenta lo anterior implemente un programa que:
 
-*a.* Defina el tipo RGB24 y RGB16 de forma eficiente.
+_a._ Defina el tipo RGB24 y RGB16 de forma eficiente.
 
-*b.* Implemente 2 funciones de conversión de un formato a otro y viceversa.
+_b._ Implemente 2 funciones de conversión de un formato a otro y viceversa.
 
 **13\.** Reimplemente todos los ítems del ejercicio 10 utilizando campos de bits para definir el estado de cada módulo del dispositivo.
 
