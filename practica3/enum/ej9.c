@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-typedef enum {
+typedef enum
+{
   DOMINGO,
   LUNES,
   MARTES,
@@ -10,6 +11,18 @@ typedef enum {
   SABADO
 } Dias;
 
-void imprimirDias(){
+void imprimirDias()
+{
+  char *semana[] = {"Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"};
 
+  printf("Los dias de la semana son: ");
+  for (Dias i = DOMINGO; i <= SABADO; i++)
+  {
+    printf("%s ", semana[i]);
+  }
+}
+
+int main () {
+  imprimirDias();
+  return 0;
 }

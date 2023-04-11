@@ -14,13 +14,13 @@ typedef enum {
   ABAJO
 } AlineacionVertical;
 
-//Este enum no es correcto
+//Este enum es correcto
 typedef enum {
   DOS = 2,
   CERO = 0,
-  UNO,
+  UNO, // 1
   MENOS_UNO = -1,
-  OTRO
+  OTRO // 0
 } Numeros;
 
 //Este enum no es correcto
