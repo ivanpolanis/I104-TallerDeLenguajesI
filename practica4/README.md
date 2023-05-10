@@ -129,7 +129,9 @@ _g._ ¿Todos los códigos compilan de acuerdo a ANSI C90?
 
 **10\.** Escriba un programa que lea un número entero _n_ y luego reserve memoria en forma dinámica para un arreglo de _n_ elementos double. Inicialice las posiciones del arreglo a partir de valores ingresados por teclado y a continuación imprima el promedio de todos ellos.
 
-_a._ Empleando notación de arreglos. b. Empleando notación de punteros.
+_a._ Empleando notación de arreglos.
+
+_b._ Empleando notación de punteros.
 
 Por último, libere la memoria reservada.
 
@@ -190,9 +192,9 @@ _c)_ Implemente una función para imprimir la pirámide.
 
 _d)_ Implemente una función para destruir la pirámide.
 
-**8\.** Escriba un programa que permita conocer todos los divisores de un número entero _n_ leído desde teclado. Los números deben almacenarse en un arreglo unidimensional. Como se desea optimizar el espacio a ocupar, la memoria debe reservarse a medida que se la va necesitando. Una vez que se almacenaron todos los divisores, imprímalos junto al número _n_. Por último, libere la memoria reservada.
+**16\.** Escriba un programa que permita conocer todos los divisores de un número entero _n_ leído desde teclado. Los números deben almacenarse en un arreglo unidimensional. Como se desea optimizar el espacio a ocupar, la memoria debe reservarse a medida que se la va necesitando. Una vez que se almacenaron todos los divisores, imprímalos junto al número _n_. Por último, libere la memoria reservada.
 
-**9\.** Dado el siguiente código:
+**17\.** Dado el siguiente código:
 
 ```c
 #include <stdio.h>
