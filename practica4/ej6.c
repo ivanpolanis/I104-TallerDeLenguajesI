@@ -9,21 +9,33 @@ typedef struct nodo
 
 typedef nodo *list;
 
-list inicializar();
-void borrar(list ptr);
-void agregarInicio(list ptr);
-void agregarFinal(list ptr);
+list inicializar(int);
+void borrar(list *ptr);
+void agregarInicio(list *ptr, int);
+void agregarFinal(list *ptr, int);
 int elems(list ptr);
 void printlist(list ptr);
 
 int main()
 {
+  list l = inicializar(5);
+  agregarFinal(&l, 6);
+  agregarFinal(&l, 7);
+  agregarFinal(&l, 8);
+  agregarInicio(&l, 4);
+  printlist(l);
+  printf("\n");
+  printf("size: %d\n", elems(l));
+  return 0;
+  borrar(&l);
+  printlist(l);
   return 0;
 }
 
-list inicializar()
+list inicializar(int n)
 {
-  list ptr = (list)malloc(sizeof(list));
+  list ptr = (list)malloc(sizeof(nodo));
+  ptr->n = n;
   ptr->next = NULL;
   return ptr;
 }
@@ -40,7 +52,7 @@ void borrar(list *ptr)
 
 void agregarInicio(list *ptr, int n)
 {
-  list new = (list)malloc(sizeof(list));
+  list new = (list)malloc(sizeof(nodo));
   printf("Ingrese un numero: ");
   new->n = n;
   new->next = *ptr;
@@ -49,8 +61,8 @@ void agregarInicio(list *ptr, int n)
 
 void agregarFinal(list *ptr, int n)
 {
-  list aux = ptr;
-  list new = (list)malloc(sizeof(list));
+  list aux = *ptr;
+  list new = (list)malloc(sizeof(nodo));
   printf("Ingrese un numero: ");
   new->n = n;
   new->next = NULL;
@@ -66,7 +78,7 @@ void agregarFinal(list *ptr, int n)
   }
 }
 
-int elems(list *ptr)
+int elems(list ptr)
 {
   int el = 0;
   if (ptr != NULL)
@@ -81,7 +93,7 @@ int elems(list *ptr)
   return el;
 }
 
-void printlist(list *ptr)
+void printlist(list ptr)
 {
   if (ptr != NULL)
   {
