@@ -119,7 +119,9 @@ _b._ ¿En qué momento se determina cuánta memoria se va a reservar (compilaci�
 
 _c._ ¿Cuál es el límite de tamaño de cada tipo de arreglo?
 
-_d._ ¿Se puede cambiar el tamaño en ejecución? e. ¿Se puede liberar la memoria reservada?
+_d._ ¿Se puede cambiar el tamaño en ejecución?
+
+_e._ ¿Se puede liberar la memoria reservada?
 
 _f._ ¿El nombre del arreglo puede apuntar a otra dirección?
 
