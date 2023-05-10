@@ -15,20 +15,21 @@ void agregarInicio(list *ptr, int);
 void agregarFinal(list *ptr, int);
 int elems(list ptr);
 void printlist(list ptr);
+list invertir(list ptr);
 
 int main()
 {
-  list l = inicializar(5);
-  agregarFinal(&l, 6);
-  agregarFinal(&l, 7);
-  agregarFinal(&l, 8);
-  agregarInicio(&l, 4);
+  list l = NULL;
+  int n;
+  do{
+    printf("Ingrese un numero(0 para terminar): ");
+    scanf("%d", &n);
+    agregarFinal(&l, n);
+  } while (n != 0);
+  list il = invertir(l);
   printlist(l);
   printf("\n");
-  printf("size: %d\n", elems(l));
-  return 0;
-  borrar(&l);
-  printlist(l);
+  printlist(il);
   return 0;
 }
 
@@ -42,7 +43,7 @@ list inicializar(int n)
 
 void borrar(list *ptr)
 {
-  while (ptr != NULL)
+  while (*ptr != NULL)
   {
     list curr = *ptr;
     *ptr = (*ptr)->next;
@@ -53,7 +54,6 @@ void borrar(list *ptr)
 void agregarInicio(list *ptr, int n)
 {
   list new = (list)malloc(sizeof(nodo));
-  printf("Ingrese un numero: ");
   new->n = n;
   new->next = *ptr;
   *ptr = new;
@@ -63,7 +63,6 @@ void agregarFinal(list *ptr, int n)
 {
   list aux = *ptr;
   list new = (list)malloc(sizeof(nodo));
-  printf("Ingrese un numero: ");
   new->n = n;
   new->next = NULL;
   if (aux != NULL)
@@ -107,4 +106,13 @@ void printlist(list ptr)
   }
   else
     printf("La lista no tiene elementos");
+}
+
+list invertir(list ptr){
+  list l=NULL;
+  while(ptr != NULL){
+    agregarInicio(&l, ptr->n);
+    ptr = ptr->next;
+  }
+  return l;
 }
