@@ -10,11 +10,12 @@ typedef struct nodo
 typedef nodo *list;
 
 list inicializar(int);
-void borrar(list *ptr);
-void agregarInicio(list *ptr, int);
-void agregarFinal(list *ptr, int);
-int elems(list ptr);
-void printlist(list ptr);
+void borrar(list *);
+void agregarInicio(list *, int);
+void agregarFinal(list *, int);
+void agregarOrdenado(list *, int);
+int elems(list);
+void printlist(list);
 
 int main()
 {
@@ -75,6 +76,22 @@ void agregarFinal(list *ptr, int n)
   }
 }
 
+void agregarOrdenado(list *ptr, int n){
+  list aux = *ptr;
+  list new = (list)malloc(sizeof(nodo));
+  new->n = n;
+  new->next = NULL;
+  if(aux != NULL){
+    while(aux->next != NULL && n < aux->n){
+      aux = aux->next;
+    }
+    new->next = aux->next;
+    aux->next = new;
+  } else {
+    *ptr = new;
+  }
+
+}
 int elems(list ptr)
 {
   int el = 0;
