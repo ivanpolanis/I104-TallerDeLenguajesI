@@ -28,17 +28,17 @@ Al descubrir una casilla que no tiene bomba, el juego muestra el número de mina
 
 Para ayudar al jugador, el juego permite marcar (y desmarcar) una casilla sospechosa de contener una bomba.
 
-Hay muchas implementaciones disponibles en línea, una de ellas se puede acceder en el sitio <https://minesweeper.online/es/>[.](https://minesweeper.online/es/)[ ](https://minesweeper.online/es/)Se recomienda que dediquen unos minutos para jugar algunas partidas con el objetivo de comprender la dinámica del juego.
+Hay muchas implementaciones disponibles en línea, una de ellas se puede acceder en el sitio <https://minesweeper.online/es/>[.](https://minesweeper.online/es/) Se recomienda que dediquen unos minutos para jugar algunas partidas con el objetivo de comprender la dinámica del juego.
 
 Para este ejercicio debe implementar el nivel principiante que es una versión para un tablero de 8 x 8 casillas y 10 minas. Básicamente, el juego consiste en la siguiente secuencia de pasos que se repiten hasta que se termine:
 
 - _Mostrar el estado actual del tablero:_ se refleja el estado individual de cada casilla que puede estar
-oculta (verde), oculta y marcada como posible bomba (celeste), visible sin bomba con el número de
-bombas alrededor (naranja) o visible con bomba (roja, juego perdido).
+  oculta (verde), oculta y marcada como posible bomba (celeste), visible sin bomba con el número de
+  bombas alrededor (naranja) o visible con bomba (roja, juego perdido).
 
 - _Realizar una jugada:_ una jugada consiste en una coordenada de una letra de la A a la H y un
-número del 0 al 7. Además, puede indicarse de forma opcional el signo de pregunta (?) para
-marcar o desmarcar una casilla sospechosa de bomba sin mostrarla.
+  número del 0 al 7. Además, puede indicarse de forma opcional el signo de pregunta (?) para
+  marcar o desmarcar una casilla sospechosa de bomba sin mostrarla.
 
 - Actualizar el estado de juego: en función de la jugada realizada se visibiliza o marca una casilla.
 
