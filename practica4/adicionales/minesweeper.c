@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <time.h>
 
 #define ROWS 8
 #define COLS 8
@@ -25,6 +26,8 @@ void show_near(cell **, int, int);
 void mark_cell(cell **, int, int, int *);
 void check_victory(cell **);
 
+void clear();
+
 int main()
 {
   cell **board = generate_board();
@@ -37,7 +40,7 @@ int main()
     char input[4];
     printf("Enter a cell and mode (F for flag, S for show): ");
     scanf("%s", input);
-    system("cls");
+    clear();
     int row, col;
     if (!validate_input(input, &mode, &row, &col))
     {
@@ -127,7 +130,7 @@ void place_mine(cell **board, int frow, int fcol)
       board[i][j] = curr;
     }
   }
-
+  srand(time(NULL));
   for (int i = 0; i < QTY; i++)
   {
     int row = rand() % ROWS;
@@ -295,4 +298,13 @@ void check_victory(cell **board)
       }
     }
   }
+}
+
+void clear()
+{
+#ifdef _WIN32
+  system("cls");
+#else
+  system("clear");
+#endif
 }
