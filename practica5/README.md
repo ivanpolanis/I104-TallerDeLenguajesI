@@ -104,7 +104,13 @@ El índice debe generarse en memoria y estar ordenado por DNI para finalmente al
 
 A continuación puede verse un ejemplo para 5 personas:
 
-[![ejemplo2.png](https://i.postimg.cc/v8fzK1PP/ejemplo2.png)](https://postimg.cc/jCqPwjYN)
+| Byte inicial (0) | ID  |   DNI    | Apellido  |  Nombre  |     Trabajo     |            Correo             |  Ciudad   |       Pais       |
+| :--------------: | :-: | :------: | :-------: | :------: | :-------------: | :---------------------------: | :-------: | :--------------: |
+|        51        |  1  | 30919537 | Alldridge |  Enoch   |     Auditor     | <Enoch_Alldridge440@deons.tech> | Worcester |     Vietnam      |
+|       135        |  2  | 50696081 |  Doherty  |   Noah   |   Treausurer    |  <Noah_Doherty3511@deons.tech>  |  Venice   | Marshall Islands |
+|       222        |  3  | 41858450 |   Gates   |   Rae    | HR Coordinator  |   <Rae_Gates7739@sveldo.biz>    |  Memphis  |     Cameroon     |
+|       301        |  4  | 57597223 |   Forth   | Nicholas |    Lecturer     | <Nicholas_Forth1084@supunk.biz> |  Boston   |    Uzbekistan    |
+|       385        |  5  | 12325238 |  Ingram   |  Faith   | Health Educator |  <Faith_Ingram6155@vetan.org>   |  Seattle  |     Bolivia      |
 
 Ordenando por DNI las 5 primeras entradas, el orden sería 5,1,3,2 y 4 (columna id).
 
