@@ -43,11 +43,11 @@ void count(char *buffer, CharCount *counter)
   while (*(buffer + i) != '\n')
   {
     if (*(buffer + i) >= 'A' && *(buffer + i) <= 'Z')
-      counter->up += 1;
+      counter->up++;
     else if (*(buffer + i) >= 'a' && *(buffer + i) <= 'z')
-      counter->low += 1;
+      counter->low++;
     else if (*(buffer + i) >= '0' && *(buffer + i) <= '9')
-      counter->dig +=1;
+      counter->dig++;
     i++;
   }
 }
