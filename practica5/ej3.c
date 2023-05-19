@@ -29,6 +29,8 @@ int main()
     i++;
   }
 
+  fclose(f);
+
   printf("The day with the highest precipitation is day %d, with %d mm.\n", max.day, max.precipitation);
 
   return 0;

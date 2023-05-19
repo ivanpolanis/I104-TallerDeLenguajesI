@@ -32,6 +32,8 @@ int main()
     return 1;
   }
 
+  fclose(f);
+
   printf("Up: %d; Low: %d; Dig: %d;\n", counter.up,counter.low,counter.dig);
 
   return 0;

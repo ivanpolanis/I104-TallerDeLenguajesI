@@ -15,6 +15,8 @@ int main(){
     total += amount;
   }
 
+  fclose(f);
+
   printf("Total amount: %.2f", total);
 
   return 0;
