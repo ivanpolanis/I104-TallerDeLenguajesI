@@ -28,7 +28,7 @@ int main()
 
 void writeField(FILE *f, float *arr, int fields, char *str)
 {
-  fprintf(f,"%s:", str);
+  fprintf(f, "%s:", str);
   for (int i = 0; i < fields; i++)
   {
     fprintf(f, "%.2f|", arr[i]);
@@ -39,7 +39,8 @@ void writeField(FILE *f, float *arr, int fields, char *str)
 int writeReport(t_values values, int fields)
 {
   FILE *report_file = fopen("recursos/reporte_vinos.txt", "w");
-  if(report_file == NULL){
+  if (report_file == NULL)
+  {
     printf("An error has ocurred.");
     return 1;
   }
@@ -110,7 +111,7 @@ void readFile(t_values *values, int *fields)
     }
     lines++;
   }
-  printf("%d", lines);
+
   for (int i = 0; i < *fields; i++)
   {
     avg[i] /= lines;
