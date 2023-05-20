@@ -71,11 +71,11 @@ Se desea obtener información a partir del archivo llamado _vinos\.csv_ (el cual
 
 **7)** Escriba un programa que copie el contenido de un archivo de texto en otro nuevo\.
 
-_a)_ Utilizando las funciones fgetcy fputc.
+_a)_ Utilizando las funciones fgetc y fputc.
 
-_b)_ Utilizando las funciones fgetsy fputs.
+_b)_ Utilizando las funciones fgets y fputs.
 
-_c)_ Utilizando las funciones fready fwrite.
+_c)_ Utilizando las funciones fread y fwrite.
 
 **8)** Escriba un programa que lea desde teclado números enteros de una cifra (del 0 al 9) y que cree dos archivos, los cuales almacenen los números leídos\. El primer archivo debe llamarse “numeros\.txt” y
 contener en formato texto todos los números leídos en forma consecutiva\. El segundo archivo debe llamarse “numeros\.dat” y contener todos los números leídos en formato binario\.
