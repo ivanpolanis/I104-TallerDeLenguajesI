@@ -116,6 +116,14 @@ A continuación puede verse un ejemplo para 5 personas:
 
 Ordenando por DNI las 5 primeras entradas, el orden sería 5,1,3,2 y 4 (columna id).
 
+|   DNI  |Desplazamiento dentro de "personas.csv"|
+|:------:|:-------------------------------------:|
+|12325238|                 385                   |
+|30919537|                 51                    |
+|41858450|                 222                   |
+|50696081|                 135                   |
+|57597223|                 301                   |
+
 _b)_ Realice un programa que muestre en pantalla toda la información de una persona a través de un
 DNI ingresado por teclado. Si la persona no existe deberá informar el error.
 
