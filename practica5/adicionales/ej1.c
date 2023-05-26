@@ -3,6 +3,7 @@
 #include <string.h>
 
 #define SIZE 64
+#define STR_SIZE 32
 typedef struct
 {
     char letter;
@@ -11,7 +12,7 @@ typedef struct
 
 typedef struct
 {
-    char *word;
+    char word[STR_SIZE];
     double frequency;
 } Word;
 
@@ -24,6 +25,7 @@ void writeFile();
 void insert(Word **arr, size_t *capacity, Word data);
 void heapify(Word arr[], int n, int i);
 void heapSort(Word arr[], int n);
+void printFile();
 
 int main()
 {
@@ -56,7 +58,7 @@ void writeFile()
     {
         line[strcspn(line, "\n")] = '\0';
         Word word;
-        word.word = strdup(line);
+        strcpy(word.word, line);
         word.frequency = getFrequency(line);
         insert(&arr, &size, word);
     }

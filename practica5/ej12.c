@@ -92,6 +92,7 @@ void insert(t_idx **arr, size_t *capacity, t_idx data)
 void printPerson(person p)
 {
   printf("%d %d %s %s %s %s %s %s\n", p.id, p.dni, p.surname, p.name, p.work, p.mail, p.city, p.country);
+  printf("naseh");
 }
 
 int buscar(FILE *csv, t_idx *index, size_t size, int dni, person *p)
