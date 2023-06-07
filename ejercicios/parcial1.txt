@@ -1,0 +1,101 @@
+1.
+posible
+Linea = Nuevo texto
+Linea = basura
+
+2.
+10 9 8 7 6
+
+3.
+#define nPares(x,y) !(x%2)+!(y%2)
+
+4.
+a.f
+b.f
+c.t
+d.f
+e.f
+f.f
+g.t
+h.f
+i.f
+j.t
+
+5.
+struct destino {
+  int codProv;
+  int codLoc;
+  char nomLoc[30];
+  int nHab;
+};
+
+int main(){
+  FILE *f = fopen("Habiatantes.txt","r");
+  if(f == NULL)
+    return 1;
+  procesar(f);
+  imprimir(calcular());
+  return 0;
+}
+
+void procesar(FILE *f){
+  FILE *b = fopen("Habitantes.dat", "w");
+  if(b == NULL){
+    exit(1);
+  }
+  char line[SIZE];
+  struct destino localidad;
+  while(fgets(line,SIZE,f) != null){
+    sscanf(line, "%d %d %s %d\n", &localidad.codProv, &localidad.codLoc, localidad.nomLoc, &localidad.nHab);
+    fwrite(localidad, sizeof(struct destino),1,b);
+  }
+  fclose(b);
+}
+
+struct destino calcular(){
+  FILE *b = fopen("Habitantes.dat", "r");
+  if(b==NULL){
+    exit(1);
+  }
+  struct destino loc, max;
+  max.nHab = -1;
+  while(fread(loc, sizeof(struct destino),1,b) != 0){
+    if(loc.nHab > max.nHab){
+      max.nHab = loc.nHab;
+      max.codProv = loc.codProv;
+      max.codLoc = loc.codLoc;
+      strcpy(max.nomLoc,loc.nomLoc);
+    }
+  }
+  fclose(b);
+  return max;
+}
+
+void mostrar(struct destino loc){
+  printf("%d %s\n", loc.codLoc, loc.nomLoc);
+}
+
+6.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char **argv){
+  if(argc == 1){
+    printf("Error");
+    return 1;
+  }
+  for(int i = 1; i < argc; i++){
+    printf("%s ", argv[i]);
+  }
+  return 0;
+}
+
+7.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+
+}

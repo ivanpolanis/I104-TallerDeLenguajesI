@@ -48,5 +48,8 @@ Word *getArray(FILE *f, int size){
   while(fread(&arr[i], sizeof(Word), 1, f) != 0){
     i++;
   }
-  return arr;
+  for (int i = 0; i < size; i++){
+    
+  }
+    return arr;
 }
