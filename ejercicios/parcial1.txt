@@ -95,7 +95,81 @@ int main(int argc, char **argv){
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+
+int *reservar(int n);
+void inicializar(int * ptr, int n);
+void imprimir(int *ptr, int n);
+
+int main(){
+  int n;
+  scanf("%d", &n);
+  int *ptr = reservar(n);
+  inicializar(ptr, n);
+  imprimir(ptr,n);
+  return 0;
+}
+
+int *reservar(int n){
+    int *ptr = (int *)malloc((n*(n+1)/2)*sizeof(int));
+    return ptr;
+}
+
+void inicializar(int * ptr, int n){
+    srand(time(NULL));
+    for(int i = 0; i < (n*(n+1)/2); i++){
+        ptr[i] = rand() % 21;
+      }
+}
+
+void imprimir(int *ptr, int n){
+  int pos = 0;
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            if(j <= i)
+                printf("%d ", ptr[pos + j + i]);
+            else
+                printf("0 ");
+          }
+        pos += i;
+        printf("\n");
+      }
+  }
+
+int *liberar(int *ptr){
+    free(ptr);
+    return NULL;
+}
+
+8.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct nodo {
+    int dato;
+    struct nodo *siguiente;
+  } lista;
 
 int main(){
 
-}
+  }
+
+void agregarNodo(lista *l, int n){
+  struct nodo new;
+  new.dato = n;
+  new.siguiente = *l;
+  *l = new;
+  }
+
+void eliminarNodo(lista *l, int n){
+    struct nodo act, prox, ant;
+    act = *l;
+    prox = *l.siguiente;
+    ant = *l;
+    while(act != NULL && act.dato != n){
+          ant = act;
+          act = prox;
+          prox = prox.siguiente;
+      }
+  }
